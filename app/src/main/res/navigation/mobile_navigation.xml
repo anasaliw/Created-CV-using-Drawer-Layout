@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.it18.my_cv_app.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_pd"
+            app:destination="@id/pd" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pd"
+        android:name="com.it18.my_cv_app.ui.gallery.GalleryFragment"
+        android:label="Personal Details"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_pd_to_education"
+            app:destination="@id/education" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/education"
+        android:name="com.it18.my_cv_app.ui.slideshow.SlideshowFragment"
+        android:label="Education"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_education_to_sae"
+            app:destination="@id/sae" />
+    </fragment>
+    <fragment
+        android:id="@+id/exp"
+        android:name="com.it18.my_cv_app.ui.myFragments.exp"
+        android:label="Experience"
+        tools:layout="@layout/fragment_exp" >
+        <action
+            android:id="@+id/action_exp_to_portfolio"
+            app:destination="@id/portfolio" />
+    </fragment>
+    <fragment
+        android:id="@+id/sae"
+        android:name="com.it18.my_cv_app.ui.myFragments.sae"
+        android:label="Skills And Expertise"
+        tools:layout="@layout/content_sae" >
+        <action
+            android:id="@+id/action_sae_to_exp"
+            app:destination="@id/exp" />
+    </fragment>
+    <fragment
+        android:id="@+id/portfolio"
+        android:name="com.it18.my_cv_app.ui.myFragments.portfolio"
+        android:label="Portfolio"
+        tools:layout="@layout/fragment_portfolio" />
+
+</navigation>
